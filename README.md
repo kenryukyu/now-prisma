@@ -3,11 +3,11 @@
 ## Deploy
 
 ```
+$ now RyukyuInteractive/now-prisma
+```
+
+or
+
+```
 $ now
-```
-
-Use namespace?
-
-```
-$ now --name <name>
 ```
