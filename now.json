@@ -1,0 +1,20 @@
+{
+  "type": "docker",
+  "build": {
+    "env": [
+      "SQL_HOST",
+      "SQL_PASSWORD",
+      "PRISMA_MANAGEMENT_API_SECRET"
+    ]
+  },
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": 1
+    }
+  },
+  "features": {
+    "cloud": "v1"
+  },
+  "public": false
+}
