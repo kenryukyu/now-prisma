@@ -9,3 +9,11 @@ databases:
     password: SQL_PASSWORD
     migrations: true
     active: true
+  prod:
+    connector: mysql
+    host: SQL_HOST
+    port: 3306
+    user: root
+    password: SQL_PASSWORD
+    migrations: true
+    active: true
