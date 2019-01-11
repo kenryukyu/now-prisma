@@ -60,7 +60,7 @@ Run the image in Kubernetes
 ```
 kubectl run upbiz-prisma-server --image gcr.io/irwsdsqufgdx/upbiz-prisma-img --port 4466
 ```
-Passing in --type LoadBalancer creates load balancer.  Cost money.  Need?
+Passing in --type LoadBalancer creates load balancer.  Need load balancer to get external IP address.
 ```
 kubectl expose deployment upbiz-prisma-server --type LoadBalancer --port 4466 --target-port 4466
 ```
