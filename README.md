@@ -53,7 +53,7 @@ gcloud container clusters create upbiz-standard-cluster
 ````
 ### Setup Google Cloud Kubernetes credentials
 ```
-gcloud container clusters get-credentials
+gcloud container clusters get-credentials upbiz-standard-cluster
 ```
 
 Run the image in Kubernetes
