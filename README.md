@@ -41,7 +41,7 @@ docker pull gcr.io/irwsdsqufgdx/upbiz-prisma-img
 ## Setup Kubernetes, Pull Image and Run
 https://cloud.google.com/kubernetes-engine/docs/quickstart
 
-### Create New Google Cloud Kubernetes Cluster (Only need if not done yet)
+### Create New Google Cloud Kubernetes Cluster (Only need if not done yet, better to create on Google Console, creating on command line creates expensive cluster by default)
 ```
 gcloud config set project irwsdsqufgdx
 ```
@@ -67,4 +67,16 @@ kubectl expose deployment upbiz-prisma-server --port 4466 --target-port 4466
 Inspect server
 ```
 kubectl get service upbiz-prisma-server
+```
+View service
+```
+http://[EXTERNAL_IP]/
+```
+### Remove service
+```
+kubectl delete service upbiz-prisma-server
+```
+### Delete Cluster (Dangerous, only if want to take down service permanently)
+```
+gcloud container clusters delete upbiz-standard-cluster
 ```
