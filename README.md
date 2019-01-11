@@ -62,7 +62,7 @@ kubectl run upbiz-prisma-server --image gcr.io/irwsdsqufgdx/upbiz-prisma-img --p
 ```
 Passing in --type LoadBalancer creates load balancer.  Cost money.  Need?
 ```
-kubectl expose deployment upbiz-prisma-server --port 4466 --target-port 4466
+kubectl expose deployment upbiz-prisma-server --type LoadBalancer --port 4466 --target-port 4466
 ```
 Inspect server
 ```
