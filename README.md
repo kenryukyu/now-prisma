@@ -38,3 +38,33 @@ docker push gcr.io/irwsdsqufgdx/upbiz-prisma-img
 ```
 docker pull gcr.io/irwsdsqufgdx/upbiz-prisma-img
 ```
+## Setup Kubernetes, Pull Image and Run
+https://cloud.google.com/kubernetes-engine/docs/quickstart
+
+### Create New Google Cloud Kubernetes Cluster (Only need if not done yet)
+```
+gcloud config set project irwsdsqufgdx
+```
+```
+gcloud config set compute/zone asia-southeast1-b	
+```
+```
+gcloud container clusters create upbiz-standard-cluster
+````
+### Setup Google Cloud Kubernetes credentials
+```
+gcloud container clusters get-credentials
+```
+
+Run the image in Kubernetes
+```
+kubectl run upbiz-prisma-server --image gcr.io/irwsdsqufgdx/upbiz-prisma-img --port 4466
+```
+Passing in --type LoadBalancer creates load balancer.  Cost money.  Need?
+```
+kubectl expose deployment upbiz-prisma-server --port 4466 --target-port 4466
+```
+Inspect server
+```
+kubectl get service upbiz-prisma-server
+```
