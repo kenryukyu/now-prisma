@@ -76,6 +76,10 @@ http://[EXTERNAL_IP]/
 ```
 kubectl delete service upbiz-prisma-server
 ```
+Delete deployment
+```
+kubectl delete deployment <deployment name>
+````
 ### Delete Cluster (Dangerous, only if want to take down service permanently)
 ```
 gcloud container clusters delete upbiz-standard-cluster
